@@ -4,16 +4,25 @@ fun main() {
          println(currentAge)
     var lista = listOf(1,2,5,8,9,7,5,6)
     println(1 in lista)
-    */
+    */ 
+    fun Fatorial(n:Int):Double{
+       var f:Double = 1.0
+       for(i in 1..n){
+           f*=i
+       }
+       return f
+   }
     fun calculate (n1:Double, n2:Double, operation:String){
         when{
             operation == "soma" -> println(n1+n2)
             operation == "mult" -> println(n1*n2)
             operation == "div" -> println(n1/n2)
             operation == "resto" -> println(n1%n2)
-            //operation == "fatorial" ->println((for i in 1..n1){i+=})
+            operation == "fatorial" ->println(Fatorial(n1.toInt()))
             else -> println("não foi possivel operar!")
         }
     }
-   calculate(8.0,5.0,"resto" )
+   calculate(8.0,5.0,"fatorial" )
+   
+  
 }
